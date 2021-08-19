@@ -5,8 +5,12 @@ require('./database');
 
 async function main (){
 
-    await app.listen(app.get('port'));
-    console.log('iniciando en puerto ', app.get('port'));
+    await app.listen(app.get('port'),'0.0.0.0',()=>{
+        console.log('iniciando en puerto ', app.get('port'));
+    }
+    
+    );
+    
     
 }
 
